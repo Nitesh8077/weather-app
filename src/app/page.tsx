@@ -2,13 +2,23 @@
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Home() {
-  const [city, setCity] = useState("");
-  const [weather, setWeather] = useState(null);
+interface WeatherData {
+  name: string;
+  main: {
+    temp: number;
+  };
+  weather: {
+    description: string;
+  }[];
+}
+
+export default function Home(): JSX.Element {
+  const [city, setCity] = useState<string>("");
+  const [weather, setWeather] = useState<WeatherData | null>(null);
 
   const fetchWeather = async () => {
     const response = await fetch(`/api/weather?city=${city}`);
-    const data = await response.json();
+    const data: WeatherData = await response.json();
     setWeather(data);
   };
 
