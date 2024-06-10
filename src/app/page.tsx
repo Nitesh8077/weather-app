@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
       style={{ backgroundImage: "url('/path/to/clouds.jpg')" }}
     >
       <div className="bg-white bg-opacity-75 p-10 rounded-xl shadow-xl text-center">
-        <h1 className="text-6xl font-bold mb-8 text-blue-800">Weather App</h1>
+        <h1 className="text-6xl font-bold mb-8 text-yellow-800">Weather App</h1>
         <input
           type="text"
           value={city}
