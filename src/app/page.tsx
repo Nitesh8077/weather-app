@@ -34,7 +34,7 @@ export default function Home(): JSX.Element {
           value={city}
           onChange={(e) => setCity(e.target.value)}
           placeholder="Enter city"
-          className="px-4 py-2 border rounded shadow-lg text-lg w-80 mb-4"
+          className="px-4 py-2 border rounded shadow-lg text-lg w-80 mb-4 text-black"
         />
         <button
           onClick={fetchWeather}
